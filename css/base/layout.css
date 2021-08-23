@@ -125,10 +125,10 @@
   margin-left: var(--ml11);
 }
 
-.row > .visible {
+.row .visible {
   display: inline-block;
 }
-.row > .hidden {
+.row .hidden {
   display: none;
 }
 
@@ -212,10 +212,10 @@
     margin-left: var(--ml11);
   }
 
-  .row > .visible-sm {
+  .row .visible-sm {
     display: inline-block;
   }
-  .row > .hidden-sm {
+  .row .hidden-sm {
     display: none;
   }
   .row > .reverse-sm {
@@ -310,10 +310,10 @@
     margin-left: var(--ml11);
   }
 
-  .row > .visible-md {
+  .row .visible-md {
     display: inline-block;
   }
-  .row > .hidden-md {
+  .row .hidden-md {
     display: none;
   }
   .row > .reverse-md {
@@ -407,10 +407,10 @@
     margin-left: var(--ml11);
   }
 
-  .row > .visible-lg {
+  .row .visible-lg {
     display: inline-block;
   }
-  .row > .hidden-lg {
+  .row .hidden-lg {
     display: none;
   }
   .row > .reverse-lg {
@@ -505,10 +505,10 @@
     margin-left: var(--ml11);
   }
 
-  .row > .visible-xl {
+  .row .visible-xl {
     display: inline-block;
   }
-  .row > .hidden-xl {
+  .row .hidden-xl {
     display: none;
   }
   .row > .reverse-xl {
@@ -602,10 +602,10 @@
     margin-left: var(--ml11);
   }
 
-  .row > .visible-xxl {
+  .row .visible-xxl {
     display: inline-block;
   }
-  .row > .hidden-xxl {
+  .row .hidden-xxl {
     display: none;
   }
 .row > .reverse-xxl {

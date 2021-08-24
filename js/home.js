@@ -1,5 +1,8 @@
 // import JS modules
 
+import { services } from "./components/services/services.js";
+import { servicesData } from "./data/servicesData.js";
+
 // execute JS modules
 
 /* header start */
@@ -9,6 +12,7 @@
 /* hero end */
 
 /* what we do start */
+services('#services_block', servicesData);
 /* what we do end */
 
 /* stop leaving start */

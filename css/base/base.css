@@ -1,0 +1,23 @@
+img {
+  display: inline-block;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-light {
+  background-color: var(--light-color);
+}
+
+.bg-dark {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.bottom-border {
+  border-bottom: 1px solid #ddd;
+}

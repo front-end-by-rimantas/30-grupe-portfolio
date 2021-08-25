@@ -29,6 +29,7 @@ function pricing(selector, data) {
         console.error('ERROR: pagal pateikta selector, nepavyko rasti norimo DOM elemento');
         return false;
     }
+    DOM.classList.add('pricing-list');
 
     let HTML = '';
 
@@ -40,7 +41,7 @@ function pricing(selector, data) {
             nonEmptyString(item.link)) {
             let festuresHTML = '';
             for (const feature of item.features) {
-                festuresHTML += `<li class="feature">${feature}</li>`;
+                festuresHTML += `<li class="feature fa fa-check-circle-o">${feature}</li>`;
             }
 
             let badgeHTML = '';

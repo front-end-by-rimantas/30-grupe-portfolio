@@ -29,7 +29,11 @@ function services(selector, data) {
             nonEmptyString(item.title) &&
             nonEmptyString(item.description) &&
             nonEmptyString(item.icon)) {
-            HTML += `<div class="col-12 col-md-6 col-lg-4">${item.title}</div>`;
+            HTML += `<div class="col-12 col-md-6 col-lg-4 service">
+                        <i class="icon fa fa-${item.icon}"></i>
+                        <h3 class="title">${item.title}</h3>
+                        <p class="description">${item.description}</p>
+                    </div>`;
         }
     }
 

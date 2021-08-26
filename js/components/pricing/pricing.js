@@ -1,24 +1,14 @@
+import { featuresList } from '../features-list/featuresList.js';
+import { Valid } from '../validation/Valid.js';
+
 function pricing(selector, data) {
-    // <div class="col-12 col-md-4">Pricing 1</div>
-    const nonEmptyString = (str) => {
-        return typeof str === 'string' && str !== '';
-    }
-
-    const isValidPrice = (price) => {
-        return typeof price === 'number' && isFinite(price) && price >= 0;
-    }
-
-    const nonEmptyArray = (arr) => {
-        return Array.isArray(arr) && arr.length > 0;
-    }
-
     // input validation
-    if (!nonEmptyString(selector)) {
+    if (!Valid.nonEmptyString(selector)) {
         console.error('ERROR: nevalidus selector');
         return false;
     }
 
-    if (!nonEmptyArray(data)) {
+    if (!Valid.nonEmptyArray(data)) {
         console.error('ERROR: nevalidus data');
         return false;
     }
@@ -34,18 +24,14 @@ function pricing(selector, data) {
     let HTML = '';
 
     for (const item of data) {
-        if (nonEmptyString(item.title) &&
-            isValidPrice(item.price) &&
-            nonEmptyArray(item.features) &&
-            nonEmptyString(item.buttonText) &&
-            nonEmptyString(item.link)) {
-            let festuresHTML = '';
-            for (const feature of item.features) {
-                festuresHTML += `<li class="feature fa fa-check-circle-o">${feature}</li>`;
-            }
+        if (Valid.nonEmptyString(item.title) &&
+            Valid.price(item.price) &&
+            Valid.nonEmptyArray(item.features) &&
+            Valid.nonEmptyString(item.buttonText) &&
+            Valid.nonEmptyString(item.link)) {
 
             let badgeHTML = '';
-            if (nonEmptyString(item.badge)) {
+            if (Valid.nonEmptyString(item.badge)) {
                 badgeHTML = `<div class="badge">${item.badge}</div>`;
             }
 
@@ -57,9 +43,7 @@ function pricing(selector, data) {
                             <span class="value">${item.price}</span>
                             <span class="down">/mo</span>
                         </div>
-                        <ul class="features">
-                            ${festuresHTML}
-                        </ul>
+                        ${featuresList(item.features)}
                         <a href="${item.link}" class="btn">${item.buttonText}</a>
                     </div>`;
         }

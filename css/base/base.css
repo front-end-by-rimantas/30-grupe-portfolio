@@ -8,13 +8,31 @@ img {
 .bg-white {
   background-color: #fff;
 }
-
 .bg-light {
   background-color: var(--light-color);
 }
-
 .bg-dark {
   background-color: var(--dark-color);
+  color: #fff;
+}
+.bg-main {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.bg-main-dark {
+  background-color: var(--main-dark-color);
+  color: #fff;
+}
+.bg-danger {
+  background-color: var(--danger-color);
+  color: #fff;
+}
+.bg-warning {
+  background-color: var(--warning-color);
+  color: #fff;
+}
+.bg-success {
+  background-color: var(--success-color);
   color: #fff;
 }
 

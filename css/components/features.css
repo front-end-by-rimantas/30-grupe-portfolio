@@ -1,0 +1,18 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  list-style: none;
+  font-size: 20px;
+  line-height: 1.5em;
+  color: #777;
+}
+.features > .feature {
+  font-family: inherit;
+  line-height: inherit;
+}
+.features > .feature::before {
+  font-family: 'FontAwesome';
+  margin-right: 10px;
+  color: var(--main-color);
+}

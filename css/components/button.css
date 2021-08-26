@@ -1,0 +1,15 @@
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: capitalize;
+  border-radius: 6px;
+  transition: all 0.5s;
+}
+.btn:hover {
+  background-color: var(--main-color-dark);
+}

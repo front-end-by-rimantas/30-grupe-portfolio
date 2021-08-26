@@ -8,16 +8,68 @@ img {
 .bg-white {
   background-color: #fff;
 }
-
 .bg-light {
   background-color: var(--light-color);
 }
-
 .bg-dark {
   background-color: var(--dark-color);
+  color: #fff;
+}
+.bg-main {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.bg-main-dark {
+  background-color: var(--main-dark-color);
+  color: #fff;
+}
+.bg-danger {
+  background-color: var(--danger-color);
+  color: #fff;
+}
+.bg-warning {
+  background-color: var(--warning-color);
+  color: #fff;
+}
+.bg-success {
+  background-color: var(--success-color);
   color: #fff;
 }
 
 .bottom-border {
   border-bottom: 1px solid #ddd;
+}
+
+.section-header {
+  text-align: center;
+}
+.section-header > .title {
+  text-align: inherit;
+  text-transform: capitalize;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: normal;
+}
+.section-header > .description {
+  text-align: inherit;
+  font-size: 17px;
+  line-height: 20px;
+  color: #555;
+}
+.section-header > .description > span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.section-header .title + .description {
+  margin-top: 1.5em;
+}
+
+.text-left {
+  text-align: left;
+}
+
+p {
+  font-size: 17px;
+  line-height: 20px;
+  color: #555;
 }

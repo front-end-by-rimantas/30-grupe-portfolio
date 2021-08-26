@@ -5,11 +5,16 @@
 @import './base/base.css';
 
 /* 3rd-party */
+@import './3rd-party/font-awesome.min.css';
 
 /* components */
 @import './components/button.css';
+@import './components/features.css';
 @import './components/footer.css';
 @import './components/header.css';
+@import './components/mosaic.css';
+@import './components/pricing.css';
+@import './components/services.css';
 
 /* CUSTOM PAGE STYLE BELOW THIS COMMENT LINE */
 

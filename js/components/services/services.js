@@ -1,16 +1,13 @@
-function services(selector, data) {
-    const nonEmptyString = (str) => {
-        return typeof str === 'string' && str !== '';
-    }
+import { Valid } from '../validation/Valid.js';
 
+function services(selector, data) {
     // input validation
-    if (!nonEmptyString(selector)) {
+    if (!Valid.nonEmptyString(selector)) {
         console.error('ERROR: nevalidus selector');
         return false;
     }
 
-    if (!Array.isArray(data) ||
-        data.length === 0) {
+    if (!Valid.nonEmptyArray(data)) {
         console.error('ERROR: nevalidus data');
         return false;
     }
@@ -26,9 +23,9 @@ function services(selector, data) {
 
     for (const item of data) {
         if (item.isActive &&
-            nonEmptyString(item.title) &&
-            nonEmptyString(item.description) &&
-            nonEmptyString(item.icon)) {
+            Valid.nonEmptyString(item.title) &&
+            Valid.nonEmptyString(item.description) &&
+            Valid.nonEmptyString(item.icon)) {
             HTML += `<div class="col-12 col-md-6 col-lg-4 service">
                         <i class="icon fa fa-${item.icon}"></i>
                         <h3 class="title">${item.title}</h3>

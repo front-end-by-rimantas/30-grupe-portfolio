@@ -1,7 +1,9 @@
 // import JS modules
 
+import { featuresList } from "./components/features-list/featuresList.js";
 import { pricing } from "./components/pricing/pricing.js";
 import { services } from "./components/services/services.js";
+import { achievementsFeaturesData } from "./data/achievementsFeaturesData.js";
 import { pricingData } from "./data/pricingData.js";
 import { servicesData } from "./data/servicesData.js";
 
@@ -25,6 +27,10 @@ pricing('#pricing_block', pricingData);
 /* pricing end */
 
 /* achievements start */
+const achievementsDOM = document.querySelector('#achievements .section-header');
+const achievementsFeaturesHTML = featuresList(achievementsFeaturesData);
+
+achievementsDOM.insertAdjacentHTML('afterend', achievementsFeaturesHTML);
 /* achievements end */
 
 /* blog start */

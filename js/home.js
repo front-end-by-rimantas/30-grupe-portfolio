@@ -1,6 +1,8 @@
 // import JS modules
 
+import { pricing } from "./components/pricing/pricing.js";
 import { services } from "./components/services/services.js";
+import { pricingData } from "./data/pricingData.js";
 import { servicesData } from "./data/servicesData.js";
 
 // execute JS modules
@@ -19,6 +21,7 @@ services('#services_block', servicesData);
 /* stop leaving end */
 
 /* pricing start */
+pricing('#pricing_block', pricingData);
 /* pricing end */
 
 /* achievements start */

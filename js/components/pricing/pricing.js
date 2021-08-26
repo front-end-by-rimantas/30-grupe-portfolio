@@ -49,7 +49,7 @@ function pricing(selector, data) {
                 badgeHTML = `<div class="badge">${item.badge}</div>`;
             }
 
-            HTML += `<div class="col-12 col-md-4 price">
+            HTML += `<div class="price">
                         ${badgeHTML}
                         <h3 class="title">${item.title}</h3>
                         <div class="monthly-price">

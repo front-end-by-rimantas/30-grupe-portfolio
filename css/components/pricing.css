@@ -1,7 +1,17 @@
 .pricing-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.container .pricing-list {
+  display: flex;
 }
 
 .pricing-list > .price {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   padding: 40px;
   background-color: var(--light-color);
   position: relative;
@@ -61,4 +71,10 @@
   font-family: 'FontAwesome';
   margin-right: 10px;
   color: var(--main-color);
+}
+
+@media (min-width: 991px) {
+  .pricing-list {
+    flex-direction: row;
+  }
 }

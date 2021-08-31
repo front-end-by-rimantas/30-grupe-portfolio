@@ -1,5 +1,55 @@
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+header.container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+header.container > .row {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+header.container > .row > .col-12 {
+  display: flex;
+  justify-content: space-between;
 }
 header .logo {
-  height: 30px;
+  height: 25px;
+}
+header nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 20px;
+  line-height: 25px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #555;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(calc(100% - 1px));
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+header nav > a {
+  text-decoration: inherit;
+  color: inherit;
+}
+header .hamburger {
+  line-height: 25px;
+  font-size: 25px;
+}
+
+@media (min-width: 991px) {
+  header nav {
+    flex-direction: row;
+    padding: 0;
+    position: static;
+    transform: translateY(0);
+    border-bottom: none;
+  }
 }

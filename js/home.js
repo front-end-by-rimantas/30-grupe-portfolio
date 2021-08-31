@@ -2,6 +2,7 @@
 
 import { featuresList } from "./components/features-list/featuresList.js";
 import { mosaic } from "./components/mosaic/mosaic.js";
+import { nav } from "./components/nav/nav.js";
 import { pricing } from "./components/pricing/pricing.js";
 import { services } from "./components/services/services.js";
 import { achievementsFeaturesData } from "./data/achievementsFeaturesData.js";
@@ -12,6 +13,7 @@ import { servicesData } from "./data/servicesData.js";
 // execute JS modules
 
 /* header start */
+nav('header nav');
 /* header end */
 
 /* hero start */

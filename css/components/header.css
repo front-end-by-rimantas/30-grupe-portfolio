@@ -20,11 +20,20 @@ header .logo {
 }
 header nav {
   display: flex;
+  flex-direction: column;
   gap: 20px;
+  padding: 10px 20px;
   line-height: 25px;
   font-size: 20px;
   text-decoration: none;
   color: #555;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(calc(100% - 1px));
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
 }
 header nav > a {
   text-decoration: inherit;
@@ -33,4 +42,14 @@ header nav > a {
 header .hamburger {
   line-height: 25px;
   font-size: 25px;
+}
+
+@media (min-width: 991px) {
+  header nav {
+    flex-direction: row;
+    padding: 0;
+    position: static;
+    transform: translateY(0);
+    border-bottom: none;
+  }
 }

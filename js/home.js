@@ -14,6 +14,13 @@ import { servicesData } from "./data/servicesData.js";
 
 /* header start */
 nav('header nav');
+
+const hamburgerDOM = document.querySelector('.hamburger');
+const navDOM = document.querySelector('header nav');
+hamburgerDOM.addEventListener('click', () => {
+    navDOM.classList.toggle('hidden');
+})
+
 /* header end */
 
 /* hero start */
